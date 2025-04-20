@@ -1,254 +1,170 @@
+
+css
 /* 1. Pulse In */
 [data-sfx="pulse-in"] {
-  animation: pulseIn var(--sfx-duration, 1s) ease-in-out infinite;
+animation: pulseIn var(--sfx-duration, 1s) ease-in-out infinite;
 }
 @keyframes pulseIn {
-  0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.1); opacity: 1; }
+0%, 100% { transform: scale(1); opacity: 0.8; }
+50% { transform: scale(1.1); opacity: 1; }
 }
-
 /* 2. Flicker */
 [data-sfx="flicker"] {
-  animation: flicker var(--sfx-duration, 2s) infinite;
+animation: flicker var(--sfx-duration, 2s) infinite;
 }
 @keyframes flicker {
-  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
-  20%, 22%, 24%, 55% { opacity: 0; }
+0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+20%, 22%, 24%, 55% { opacity: 0; }
 }
-
 /* 3. Slide Glow */
 [data-sfx="slide-glow"] {
-  position: relative;
-  color: #fff;
-  background: linear-gradient(90deg, #00f, #0ff, #0f0, #ff0, #f00);
-  background-size: 300%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: slideGlow 3s linear infinite;
+position: relative;
+color: #fff;
+background: linear-gradient(90deg, #00f, #0ff, #0f0, #ff0, #f00);
+background-size: 300%;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: slideGlow 3s linear infinite;
 }
 @keyframes slideGlow {
-  0% { background-position: 0%; }
-  100% { background-position: 300%; }
+0% { background-position: 0%; }
+100% { background-position: 300%; }
 }
-
 /* 4. Plasma Pop */
 [data-sfx="plasma-pop"] {
-  animation: plasmaPop 1s ease-out infinite alternate;
+animation: plasmaPop 1s ease-out infinite alternate;
 }
 @keyframes plasmaPop {
-  from { transform: scale(1); filter: hue-rotate(0deg); }
-  to { transform: scale(1.2); filter: hue-rotate(360deg); }
+from { transform: scale(1); filter: hue-rotate(0deg); }
+to { transform: scale(1.2); filter: hue-rotate(360deg); }
 }
-
 /* 5. Shadow Slide */
 [data-sfx="shadow-slide"] {
-  animation: shadowSlide 2s ease-in-out infinite;
+animation: shadowSlide 2s ease-in-out infinite;
 }
 @keyframes shadowSlide {
-  0% { text-shadow: 2px 2px #00f; }
-  50% { text-shadow: -2px -2px #f0f; }
-  100% { text-shadow: 2px 2px #0ff; }
+0% { text-shadow: 2px 2px #00f; }
+50% { text-shadow: -2px -2px #f0f; }
+100% { text-shadow: 2px 2px #0ff; }
 }
-
 /* 6. Text Echo */
 [data-sfx="text-echo"] {
-  position: relative;
-  animation: textEcho 2s ease-in-out infinite;
+position: relative;
+animation: textEcho 2s ease-in-out infinite;
 }
 @keyframes textEcho {
-  0% { text-shadow: 0 0 0 #fff; }
-  50% { text-shadow: 2px 2px 5px #ff0, -2px -2px 5px #0ff; }
-  100% { text-shadow: 0 0 0 #fff; }
+0% { text-shadow: 0 0 0 #fff; }
+50% { text-shadow: 2px 2px 5px #ff0, -2px -2px 5px #0ff; }
+100% { text-shadow: 0 0 0 #fff; }
 }
-
 /* 7. Warp Glow */
 [data-sfx="warp-glow"] {
-  animation: warpGlow 2s ease-in-out infinite;
+animation: warpGlow 2s ease-in-out infinite;
 }
 @keyframes warpGlow {
-  0%, 100% { filter: blur(0px) brightness(1); }
-  50% { filter: blur(2px) brightness(1.5); }
+0%, 100% { filter: blur(0px) brightness(1); }
+50% { filter: blur(2px) brightness(1.5); }
 }
-
 /* 8. Quantum Tunnel */
 [data-sfx="quantum-tunnel"] {
-  position: relative;
-  background: linear-gradient(45deg, #00ff88, #6100ff);
-  -webkit-mask: radial-gradient(circle at center, transparent 0%, black 20%, transparent 40%);
-  animation: quantumTunnel var(--sfx-duration, 3s) infinite linear;
+position: relative;
+background: linear-gradient(45deg, #00ff88, #6100ff);
+-webkit-mask: radial-gradient(circle at center, transparent 0%, black 20%, transparent 40%);
+animation: quantumTunnel var(--sfx-duration, 3s) infinite linear;
 }
 @keyframes quantumTunnel {
-  0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
-  50% { transform: rotate(180deg) scale(1.8); opacity: 1; }
-  100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
+0% { transform: rotate(0deg) scale(1); opacity: 0.5; }
+50% { transform: rotate(180deg) scale(1.8); opacity: 1; }
+100% { transform: rotate(360deg) scale(1); opacity: 0.5; }
 }
-
 /* 9. Holographic Text Matrix */
 [data-sfx="matrix-text"] {
-  position: relative;
-  color: transparent;
-  background-image: linear-gradient(0deg, #0f0 2px, transparent 2px);
-  background-size: 100% 4px;
-  -webkit-background-clip: text;
-  text-shadow: 0 0 8px #0f03;
-  animation: matrixFall var(--sfx-duration, 5s) linear infinite;
+position: relative;
+color: transparent;
+background-image: linear-gradient(0deg, #0f0 2px, transparent 2px);
+background-size: 100% 4px;
+-webkit-background-clip: text;
+text-shadow: 0 0 8px #0f03;
+animation: matrixFall var(--sfx-duration, 5s) linear infinite;
 }
 @keyframes matrixFall {
-  from { background-position: 0 100vh; }
-  to { background-position: 0 0; }
+from { background-position: 0 100vh; }
+to { background-position: 0 0; }
 }
-
 /* 10. Quantum Entanglement */
 [data-sfx="quantum-entangle"] {
-  display: inline-block;
-  position: relative;
+display: inline-block;
+position: relative;
 }
 [data-sfx-visible][data-sfx="quantum-entangle"]::before,
 [data-sfx-visible][data-sfx="quantum-entangle"]::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  mix-blend-mode: screen;
-  animation: entangle 4s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+content: attr(data-text);
+position: absolute;
+top: 0;
+left: 0;
+mix-blend-mode: screen;
+animation: entangle 4s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 @keyframes entangle {
-  0%, 100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    transform: translate(0, 0);
-  }
-  33% {
-    clip-path: polygon(0 10%, 100% 20%, 90% 90%, 10% 80%);
-    transform: translate(5px, -3px);
-  }
-  66% {
-    clip-path: polygon(10% 30%, 90% 0, 80% 70%, 20% 100%);
-    transform: translate(-5px, 2px);
-  }
+0%, 100% {
+clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+transform: translate(0, 0);
 }
-
+33% {
+clip-path: polygon(0 10%, 100% 20%, 90% 90%, 10% 80%);
+transform: translate(5px, -3px);
+}
+66% {
+clip-path: polygon(10% 30%, 90% 0, 80% 70%, 20% 100%);
+transform: translate(-5px, 2px);
+}
+}
 /* 11. Singularity Vortex */
 [data-sfx="singularity"] {
-  background: radial-gradient(circle at center, #000 60%, transparent 100%);
-  animation: singularitySpin var(--sfx-duration, 4s) linear infinite;
+background: radial-gradient(circle at center, #000 60%, transparent 100%);
+animation: singularitySpin var(--sfx-duration, 4s) linear infinite;
 }
 @keyframes singularitySpin {
-  from {
-    transform: rotate(0deg) scale(1);
-    background-size: 100% 100%;
-  }
-  to {
-    transform: rotate(360deg) scale(1.5);
-    background-size: 200% 200%;
-  }
+from {
+transform: rotate(0deg) scale(1);
+background-size: 100% 100%;
 }
-
+to {
+transform: rotate(360deg) scale(1.5);
+background-size: 200% 200%;
+}
+}
 /* 12. Neural Network Pulse */
 [data-sfx="neural-network"] {
-  --neural-color: #7bff00;
-  background-image:
-    repeating-linear-gradient(45deg, transparent 0px 15px, var(--neural-color) 15px 30px),
-    repeating-linear-gradient(-45deg, transparent 0px 15px, var(--neural-color) 15px 30px);
-  animation: neuralPulse 2s infinite alternate;
+--neural-color: #7bff00;
+background-image:
+repeating-linear-gradient(45deg, transparent 0px 15px, var(--neural-color) 15px 30px),
+repeating-linear-gradient(-45deg, transparent 0px 15px, var(--neural-color) 15px 30px);
+animation: neuralPulse 2s infinite alternate;
 }
 @keyframes neuralPulse {
-  from { opacity: 0.3; background-position: 0 0, 0 0; }
-  to { opacity: 1; background-position: 30px 30px, -30px -30px; }
+from { opacity: 0.3; background-position: 0 0, 0 0; }
+to { opacity: 1; background-position: 30px 30px, -30px -30px; }
 }
-
 /* 13. Time Warp Distortion */
 [data-sfx="time-warp"] {
-  filter: url(#turbulence);
-  animation: timeWarp 8s infinite linear;
+filter: url(#turbulence);
+animation: timeWarp 8s infinite linear;
 }
 @keyframes timeWarp {
-  0% { filter: url(#turbulence-0); }
-  25% { filter: url(#turbulence-1); }
-  50% { filter: url(#turbulence-2); }
-  75% { filter: url(#turbulence-3); }
-  100% { filter: url(#turbulence-0); }
+0% { filter: url(#turbulence-0); }
+25% { filter: url(#turbulence-1); }
+50% { filter: url(#turbulence-2); }
+75% { filter: url(#turbulence-3); }
+100% { filter: url(#turbulence-0); }
 }
-
 /* 14. Hyperdimensional Portal */
 [data-sfx="portal"] {
-  background: conic-gradient(
-    #ff0020, #ff8000, #ffff00, #00ff00,
-    #00ffff, #0000ff, #8000ff, #ff0080
-  );
-  animation: portalSpin 4s linear infinite;
-  border-radius: 50%;
-  position: relative;
-}
-@keyframes portalSpin {
-  from { transform: rotate(0deg) scale(1); }
-  to { transform: rotate(360deg) scale(1.5); }
-}
-[data-sfx-visible][data-sfx="portal"]::after {
-  content: '';
-  position: absolute;
-  inset: 5px;
-  background: inherit;
-  border-radius: 50%;
-  animation: portalInner 2s ease-in-out infinite alternate;
-}
-
-/* 15. Quantum Fracture */
-[data-sfx="quantum-fracture"] {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  animation: quantumFracture 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-@keyframes quantumFracture {
-  0%, 100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-  50% {
-    clip-path: polygon(
-      0 45%, 15% 44%, 30% 50%, 45% 65%,
-      55% 80%, 70% 85%, 85% 75%, 100% 60%,
-      85% 43%, 74% 35%, 58% 30%, 40% 35%,
-      25% 42%, 15% 30%, 5% 20%, 0 10%
-    );
-  }
-}
-
-/* 16. Cosmic String */
-[data-sfx="cosmic-string"] {
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    #fff 10px,
-    #fff 20px
-  );
-  animation: cosmicString 20s linear infinite;
-}
-@keyframes cosmicString {
-  from { background-position: 0 0; }
-  to { background-position: 1000px 1000px; }
-}
-
-/* 17. Quantum Superposition */
-[data-sfx="superposition"] {
-  animation:
-    superpositionRotate 8s infinite linear,
-    superpositionScale 3s infinite ease-in-out;
-}
-@keyframes superpositionRotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-@keyframes superpositionScale {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-/* 18. Hyperspace Jump */
-[data-sfx="hyperspace"] {
-  background: linear-gradient(90deg, #000 25%, #fff 50%, #000 75%);
-  background-size: 200% 100%;
-  animation: hyperspace 1s linear infinite;
-}
-@keyframes hyperspace {
-  from { background-position: 200% 0; }
-  to { background-position: 0% 0; }
+background: conic-gradient(
+#ff0020, #ff8000, #ffff00, #00ff00,
+#00ffff, #0000ff, #8000ff, #ff0080
+);
+animation: portalSpin 4s linear infinite;
+border-radius: 50%;
+position: relative;
 }
