@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyper Animations</title>
+  <link rel="stylesheet" href="animations.css" />
+  <style>
+    body {
+      background: #0a0a0a;
+      color: white;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    section {
+      margin: 3rem 0;
+    }
+    .demo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+      border: 1px dashed #444;
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+    .hidden {
+      opacity: 0;
+    }
+    [data-sfx-visible] {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <h1>✨ Hyper Animations Library ✨</h1>
+  <h2>Scroll-Triggered Animations</h2>
+
+  <section>
+    <h3>Gradient Reveal</h3>
+    <div class="demo hidden" data-sfx="gradient-reveal">Gradient Reveal Text</div>
+  </section>
+
+  <section>
+    <h3>Text Wave</h3>
+    <div class="demo hidden" data-sfx="text-wave">Waving Text</div>
+  </section>
+
+  <section>
+    <h3>Pixelate</h3>
+    <div class="demo hidden" data-sfx="pixelate">Pixelated to Clear</div>
+  </section>
+
+  <section>
+    <h3>Chromatic Aberration</h3>
+    <div class="demo hidden" data-sfx="chromatic">RGB Shift Effect</div>
+  </section>
+
+  <section>
+    <h3>Liquid Fill</h3>
+    <div class="demo hidden" data-sfx="liquid-fill">Liquid Text</div>
+  </section>
+
+  <section>
+    <h3>Particle Blast</h3>
+    <div class="demo hidden" data-sfx="particle-blast">Boom!</div>
+  </section>
+
+  <script src="sfx-scroll.js"></script>
+</body>
+</html>
