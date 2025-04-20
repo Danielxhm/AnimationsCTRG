@@ -3,72 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hyper Animations</title>
-  <link rel="stylesheet" href="animations.css" />
+  <title>SFX Animations Preview</title>
+  <link rel="stylesheet" href="sfx-animations.css" />
   <style>
     body {
-      background: #0a0a0a;
-      color: white;
-      font-family: sans-serif;
+      background: #000;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
       padding: 2rem;
     }
-    h1, h2 {
-      text-align: center;
-    }
-    section {
-      margin: 3rem 0;
-    }
-    .demo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 200px;
-      border: 1px dashed #444;
-      margin-top: 1rem;
+    .preview {
+      border: 2px solid #333;
       padding: 1rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.03);
     }
-    .hidden {
-      opacity: 0;
-    }
-    [data-sfx-visible] {
-      opacity: 1;
+    .preview span {
+      display: inline-block;
+      padding: 1rem;
+      font-size: 1.2rem;
     }
   </style>
 </head>
 <body>
-  <h1>✨ Hyper Animations Library ✨</h1>
-  <h2>Scroll-Triggered Animations</h2>
+  <div class="preview" data-sfx="neon-glitch"><span data-sfx-visible data-text="Neon Glitch">Neon Glitch</span></div>
+  <div class="preview" data-sfx="galactic-flare"><span data-sfx-visible data-text="Galactic Flare">Galactic Flare</span></div>
+  <div class="preview" data-sfx="blackhole-pulse"><span data-sfx-visible data-text="Blackhole Pulse">Blackhole Pulse</span></div>
+  <div class="preview" data-sfx="scanlines"><span data-sfx-visible data-text="Scanlines">Scanlines</span></div>
+  <div class="preview" data-sfx="zero-gravity"><span data-sfx-visible data-text="Zero Gravity">Zero Gravity</span></div>
+  <div class="preview" data-sfx="warp-grid"><span data-sfx-visible data-text="Warp Grid">Warp Grid</span></div>
+  <div class="preview" data-sfx="plasma-flicker"><span data-sfx-visible data-text="Plasma Flicker">Plasma Flicker</span></div>
+  <div class="preview" data-sfx="quantum-tunnel"><span data-sfx-visible data-text="Quantum Tunnel">Quantum Tunnel</span></div>
+  <div class="preview" data-sfx="matrix-text"><span data-sfx-visible data-text="Matrix Text">Matrix Text</span></div>
+  <div class="preview" data-sfx="quantum-entangle"><span data-sfx-visible data-text="Quantum Entanglement">Quantum Entanglement</span></div>
+  <div class="preview" data-sfx="singularity"><span data-sfx-visible data-text="Singularity">Singularity</span></div>
+  <div class="preview" data-sfx="neural-network"><span data-sfx-visible data-text="Neural Network">Neural Network</span></div>
+  <div class="preview" data-sfx="time-warp"><span data-sfx-visible data-text="Time Warp">Time Warp</span></div>
+  <div class="preview" data-sfx="portal"><span data-sfx-visible data-text="Portal">Portal</span></div>
+  <div class="preview" data-sfx="quantum-fracture"><span data-sfx-visible data-text="Quantum Fracture">Quantum Fracture</span></div>
+  <div class="preview" data-sfx="cosmic-string"><span data-sfx-visible data-text="Cosmic String">Cosmic String</span></div>
+  <div class="preview" data-sfx="superposition"><span data-sfx-visible data-text="Superposition">Superposition</span></div>
+  <div class="preview" data-sfx="hyperspace"><span data-sfx-visible data-text="Hyperspace">Hyperspace</span></div>
 
-  <section>
-    <h3>Gradient Reveal</h3>
-    <div class="demo hidden" data-sfx="gradient-reveal">Gradient Reveal Text</div>
-  </section>
-
-  <section>
-    <h3>Text Wave</h3>
-    <div class="demo hidden" data-sfx="text-wave">Waving Text</div>
-  </section>
-
-  <section>
-    <h3>Pixelate</h3>
-    <div class="demo hidden" data-sfx="pixelate">Pixelated to Clear</div>
-  </section>
-
-  <section>
-    <h3>Chromatic Aberration</h3>
-    <div class="demo hidden" data-sfx="chromatic">RGB Shift Effect</div>
-  </section>
-
-  <section>
-    <h3>Liquid Fill</h3>
-    <div class="demo hidden" data-sfx="liquid-fill">Liquid Text</div>
-  </section>
-
-  <section>
-    <h3>Particle Blast</h3>
-    <div class="demo hidden" data-sfx="particle-blast">Boom!</div>
-  </section>
-
-  <script src="sfx-scroll.js"></script>
+  <!-- SVG Filter for Time Warp -->
+  <svg style="position:absolute; width:0; height:0">
+    <filter id="turbulence-0"><feTurbulence baseFrequency="0.005" numOctaves="1" /></filter>
+    <filter id="turbulence-1"><feTurbulence baseFrequency="0.01" numOctaves="2" /></filter>
+    <filter id="turbulence-2"><feTurbulence baseFrequency="0.02" numOctaves="3" /></filter>
+    <filter id="turbulence-3"><feTurbulence baseFrequency="0.03" numOctaves="4" /></filter>
+  </svg>
 </body>
 </html>
